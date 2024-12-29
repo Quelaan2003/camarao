@@ -1,6 +1,6 @@
 @import url("https://capnkitten.github.io/BetterDiscord/Themes/Spotify-Discord/css/fonts/satoshi.css");
 :root {
-  --app-font: "Satoshi";
+  --app-font: "sans-serif";
   --app-background: hsl(0,0%,0%);
   --app-foreground: hsl(0,0%,7%);
   --app-card-radius: 8px;
@@ -130,20 +130,21 @@ body,
  *
  *  CHANNELS LIST
  *
- */
-.platform-win .sidebar_a4d4d9 {
-  border-radius: var(--app-card-radius) !important;
+Sidebar */
+
+.platform-win [class^="sidebar-"] {
+	border-radius: 0;
+    background-color: transparent;
 }
 
-.sidebar_a4d4d9 {
-  margin: 0 var(--app-card-margin) 0 0;
-  background-color: var(--app-foreground);
+div[class^="sidebar-"] nav,
+#private-channels {
+	background: var(--background-secondary) !important;
+	--background-tertiary: rgba(var(--md-black), 0.35);
 }
-.sidebar_a4d4d9.hidden_a4d4d9 {
-  margin: 0;
-}
-.sidebar_a4d4d9 .container_ee69e0 {
-  background-color: transparent;
+
+div[class^="sidebar-"]>nav>div[class^="searchBar"] {
+	height: 54px;
 }
 
 body:not(:has(:is(.container_6sXIoE, #vc-spotify-player))) .sidebar_a4d4d9 {
